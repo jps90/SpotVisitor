@@ -3,4 +3,8 @@
 
     <string name="hello_world">Hallo Welt!</string>
     <string name="action_settings">Settings</string>
+    <string name="titleLocationActivity">Bekannte Orte</string>
+    <string name="titleCompassActivity">Kompass</string>
+    <string name="lblLocation">Ort</string>
+    <string name="lblCategory">Kategorie</string>
 </resources>

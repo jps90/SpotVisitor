@@ -1,9 +1,17 @@
 package de.uni.oldenburg.spotvisitor;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import de.uni.oldenburg.spotvisitor.compass.CompassActivity;
+import de.uni.oldenburg.spotvisitor.detail.DetailActivity;
+import de.uni.oldenburg.spotvisitor.location.LocationActivity;
 
 
 public class StartUp extends ActionBarActivity {
@@ -14,6 +22,31 @@ public class StartUp extends ActionBarActivity {
         setContentView(R.layout.activity_start_up);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ((Button)findViewById(R.id.button)).setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartUp.this, LocationActivity.class);
+                startActivity(intent);
+            }
+        });
+        ((Button)findViewById(R.id.button2)).setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartUp.this, DetailActivity.class);
+                startActivity(intent);
+            }
+        });
+        ((Button)findViewById(R.id.button3)).setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartUp.this, CompassActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

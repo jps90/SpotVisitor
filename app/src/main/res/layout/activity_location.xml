@@ -4,6 +4,13 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:hint="@string/filter"
+        android:id="@+id/txtLocFilter" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

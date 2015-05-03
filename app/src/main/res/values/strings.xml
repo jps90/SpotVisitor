@@ -7,4 +7,8 @@
     <string name="titleCompassActivity">Kompass</string>
     <string name="lblLocation">Ort</string>
     <string name="lblCategory">Kategorie</string>
+    <string name="action_location">Orte</string>
+    <string name="action_compass">Kompass</string>
+    <string name="action_detail">Neuer Eintrag</string>
+    <string name="filter">Filtern...</string>
 </resources>

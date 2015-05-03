@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text=""
-            android:id="@+id/lblDetailEditLocation" />
+            android:id="@+id/lblDetEditLocation" />
 
     </LinearLayout>
 
@@ -34,14 +34,14 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/lblCategory"
-            android:id="@+id/textView3" />
+            android:id="@+id/lblDetCategory" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text=""
-            android:id="@+id/lblDetailEditCategory"
+            android:id="@+id/lblDetEditCategory"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
 

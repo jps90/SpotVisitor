@@ -2,12 +2,12 @@
     <string name="app_name">SpotVisitor</string>
 
     <string name="hello_world">Hallo Welt!</string>
-    <string name="action_settings">Settings</string>
-    <string name="titleLocationActivity">Bekannte Orte</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="titleLocationActivity">Bekannte Spots</string>
     <string name="titleCompassActivity">Kompass</string>
     <string name="lblLocation">Ort</string>
     <string name="lblDesctiption">Beschreibung</string>
-    <string name="action_location">Orte</string>
+    <string name="action_location">Spots</string>
     <string name="action_compass">Kompass</string>
     <string name="action_detail">Neuer Eintrag</string>
     <string name="filter">Filtern...</string>

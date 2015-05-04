@@ -16,9 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".compass.CompassActivity"></activity>
-        <activity android:name=".location.LocationActivity"></activity>
-        <activity android:name=".detail.DetailActivity"></activity>
+        <activity android:name=".compass.CompassActivity" />
+        <activity android:name=".location.LocationActivity" />
+        <activity android:name=".detail.DetailActivity" />
+        <activity
+            android:name=".entry.EntryActivity"
+            android:label="@string/title_activity_entry" >
+        </activity>
     </application>
 
 </manifest>

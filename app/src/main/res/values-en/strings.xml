@@ -2,5 +2,6 @@
 
     <string name="action_compass">Compass</string>
     <string name="action_detail">New Entry</string>
+    <string name="entry_image">entry_image</string>
 
 </resources>

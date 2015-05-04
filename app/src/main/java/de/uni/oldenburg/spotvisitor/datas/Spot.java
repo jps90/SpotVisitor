@@ -2,18 +2,21 @@ package de.uni.oldenburg.spotvisitor.datas;
 
 import android.graphics.drawable.Drawable;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 /**
  * Created by stubbe on 04.05.2015.
  */
-public class Spot {
+public class Spot implements Serializable{
+
+    private static final long serialVersionUID = 6064086687727213501L;
     private String description;
     private String name;
     private Date date;
-    private List<String> hastags;
-    private Drawable image;
+    private List<String> hashtags;
+    private int image;
     private String locationname;
     private String user;
     private String gps;
@@ -43,19 +46,19 @@ public class Spot {
         this.date = date;
     }
 
-    public List<String> getHastags() {
-        return hastags;
+    public List<String> getHashtags() {
+        return hashtags;
     }
 
-    public void setHastags(List<String> hastags) {
-        this.hastags = hastags;
+    public void setHashtags(List<String> hashtags) {
+        this.hashtags = hashtags;
     }
 
-    public Drawable getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(Drawable image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
@@ -83,11 +86,20 @@ public class Spot {
         this.gps = gps;
     }
 
-    public void setRating(int rating){
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
         this.rating = rating;
     }
 
-    public int getRating(){
-        return rating;
+    @Override
+    public String toString() {
+        String hashtags = "";
+        for (String hashtag : this.hashtags) {
+            hashtags += "," + hashtag;
+        }
+        return name + "," + description + hashtags;
     }
 }

@@ -6,9 +6,10 @@
     <string name="titleLocationActivity">Bekannte Orte</string>
     <string name="titleCompassActivity">Kompass</string>
     <string name="lblLocation">Ort</string>
-    <string name="lblCategory">Kategorie</string>
+    <string name="lblDesctiption">Beschreibung</string>
     <string name="action_location">Orte</string>
     <string name="action_compass">Kompass</string>
     <string name="action_detail">Neuer Eintrag</string>
     <string name="filter">Filtern...</string>
+    <string name="taketime">Aufnahmedatum</string>
 </resources>

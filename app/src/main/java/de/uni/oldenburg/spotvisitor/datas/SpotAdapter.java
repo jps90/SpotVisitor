@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
@@ -48,8 +50,7 @@ public class SpotAdapter extends ArrayAdapter<Spot> {
         }
 
         holder.txt_name.setText(spots.get(position).getName());
-
-        holder.img_image.setImageDrawable(spots.get(position).getImage());
+        holder.img_image.setImageDrawable(convertView.getResources().getDrawable(spots.get(position).getImage()));
         return convertView;
     }
 

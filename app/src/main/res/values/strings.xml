@@ -3,14 +3,13 @@
 
     <string name="hello_world">Hallo Welt!</string>
     <string name="action_settings">Einstellungen</string>
-    <string name="titleLocationActivity">Bekannte Orte</string>
+    <string name="titleLocationActivity">Bekannte Spots</string>
     <string name="titleCompassActivity">Kompass</string>
     <string name="lblLocation">Ort</string>
-    <string name="lblCategory">Kategorie</string>
-    <string name="action_location">Orte</string>
+    <string name="lblDesctiption">Beschreibung</string>
+    <string name="action_location">Spots</string>
     <string name="action_compass">Kompass</string>
     <string name="action_detail">Neuer Eintrag</string>
     <string name="filter">Filtern...</string>
-    <string name="title_activity_entry">EntryActivity</string>
-    <string name="entry_image">eintrag_bild</string>
+    <string name="taketime">Aufnahmedatum</string>
 </resources>

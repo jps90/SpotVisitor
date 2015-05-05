@@ -3,13 +3,23 @@
 
     <string name="hello_world">Hallo Welt!</string>
     <string name="action_settings">Einstellungen</string>
-    <string name="titleLocationActivity">Bekannte Spots</string>
-    <string name="titleCompassActivity">Kompass</string>
+
+
     <string name="lblLocation">Ort</string>
     <string name="lblDesctiption">Beschreibung</string>
     <string name="action_location">Spots</string>
     <string name="action_compass">Kompass</string>
-    <string name="action_detail">Neuer Eintrag</string>
+
+    <string name="start_up_appname">SpotVisitor</string>
+    <string name="start_up_create_spot">Neuer Eintrag</string>
+    <string name="start_up_seen_spots">Bekannte Spots</string>
+    <string name="start_up_compass">Kompass</string>
+    <string name="start_up_end">Beenden</string>
+
+
+
+
+
     <string name="filter">Filtern...</string>
     <string name="taketime">Aufnahmedatum</string>
 

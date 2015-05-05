@@ -19,9 +19,7 @@
         <activity android:name=".compass.CompassActivity" />
         <activity android:name=".location.LocationActivity" />
         <activity android:name=".detail.DetailActivity" />
-        <activity
-            android:name=".entry.EntryActivity"
-            android:label="@string/title_activity_entry" >
+        <activity android:name=".entry.EntryActivity">
         </activity>
     </application>
 

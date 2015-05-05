@@ -47,7 +47,6 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/lblDesctiption"
             android:inputType="text"
-            android:paddingBottom="5pt"
             android:id="@+id/lblDetDescription" />
 
         <TextView
@@ -56,6 +55,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text=""
             android:id="@+id/lblDetEditDescription"
+            android:paddingBottom="5pt"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
 

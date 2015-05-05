@@ -102,7 +102,6 @@ public class LocationActivity extends MainAction {
         spot.setUser("stubbe");
         dummylist.add(spot);
 
-        return;/*
         spot = new Spot();
         spot.setDate(new Date());
         spot.setDescription("Super schöne Kirche!");
@@ -163,7 +162,6 @@ public class LocationActivity extends MainAction {
         spot.setName("Pferdemarkt");
         spot.setUser("stubbe");
         dummylist.add(spot);
-        */
     }
 
 }

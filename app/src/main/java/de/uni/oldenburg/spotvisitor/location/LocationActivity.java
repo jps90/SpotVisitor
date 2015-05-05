@@ -1,5 +1,6 @@
 package de.uni.oldenburg.spotvisitor.location;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -7,7 +8,9 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,6 +21,8 @@ import de.uni.oldenburg.spotvisitor.R;
 import de.uni.oldenburg.spotvisitor.datas.Spot;
 import de.uni.oldenburg.spotvisitor.datas.SpotAdapter;
 import de.uni.oldenburg.spotvisitor.detail.DetailActivity;
+import de.uni.oldenburg.spotvisitor.detail.DetailFragment;
+import de.uni.oldenburg.spotvisitor.detail.DetailHelper;
 
 /**
  * Created by stubbe on 24.04.2015.
@@ -26,10 +31,12 @@ public class LocationActivity extends MainAction {
 
     private List<Spot> dummylist;
 
+    private DetailFragment detailFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_location);
+        setContentView(R.layout.fragment_location);
         getSupportActionBar().setTitle(R.string.titleLocationActivity);
         ListView lv = (ListView) findViewById(R.id.listLocLocations);
         lv.setTextFilterEnabled(true);
@@ -48,10 +55,16 @@ public class LocationActivity extends MainAction {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent detailIntent = new Intent(LocationActivity.this, DetailActivity.class);
-                Spot spot = (Spot)lv.getItemAtPosition(position);
-                detailIntent.putExtra("spot", spot);
-                startActivity(detailIntent);
+                LinearLayout lay = (LinearLayout) findViewById(R.id.fragdetails);
+                Spot spot = (Spot) lv.getItemAtPosition(position);
+                if(lay == null) {
+                    Intent detailIntent = new Intent(LocationActivity.this, DetailActivity.class);
+                    detailIntent.putExtra("spot", spot);
+                    startActivity(detailIntent);
+                }else{
+                    DetailHelper helper = new DetailHelper();
+                    helper.fillDetails(LocationActivity.this, spot);
+                }
             }
         });
 

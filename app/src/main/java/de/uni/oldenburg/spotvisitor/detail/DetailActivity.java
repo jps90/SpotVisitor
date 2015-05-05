@@ -31,14 +31,7 @@ public class DetailActivity extends MainAction {
     @Override
     protected void onStart() {
         super.onStart();
-        TextView txtLocation = (TextView) findViewById(R.id.lblDetEditLocation);
-        TextView txtDate = (TextView) findViewById(R.id.lblDetDate);
-        TextView txtDescription = (TextView) findViewById(R.id.lblDetEditDescription);
-        ImageView imgView = (ImageView) findViewById(R.id.imgDetail);
-
-        txtLocation.setText(spot.getLocationname());
-        txtDate.setText(spot.getDate().toString());
-        txtDescription.setText(spot.getDescription());
-        imgView.setImageDrawable(getResources().getDrawable(spot.getImage()));
+        DetailHelper helper = new DetailHelper();
+        helper.fillDetails(this, spot);
     }
 }

@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="30px">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:text="@string/app_name"
+        android:gravity="center_horizontal"
+        android:textSize="70px"
+        />
+
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30px"
+        android:stretchColumns="*"
+
+        >
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <Button
+                android:id="@+id/start_up_create_spot"
+                android:text="@string/start_up_create_spot"
+                android:layout_column="0"
+                android:layout_height="230px"
+
+
+                android:layout_width="match_parent" />
+            <Button
+                android:id="@+id/start_up_seen_spots"
+                android:text="@string/start_up_seen_spots"
+                android:layout_column="1"
+                android:layout_height="230px"
+
+
+                android:layout_width="match_parent" />
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <Button
+                android:id="@+id/start_up_compass"
+                android:text="@string/start_up_compass"
+                android:layout_column="0"
+                android:layout_height="230px"
+
+
+                android:layout_width="match_parent" />
+            <Button
+                android:id="@+id/start_up_end"
+                android:text="@string/start_up_end"
+                android:layout_column="1"
+                android:layout_height="230px"
+
+
+                android:layout_width="match_parent" />
+
+
+
+        </TableRow>
+
+
+
+
+    </TableLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

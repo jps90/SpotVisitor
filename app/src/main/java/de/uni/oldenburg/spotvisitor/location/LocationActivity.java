@@ -55,7 +55,7 @@ public class LocationActivity extends MainAction {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                LinearLayout lay = (LinearLayout) findViewById(R.id.fragdetails);
+                LinearLayout lay = (LinearLayout) findViewById(R.id.fraglocations);
                 Spot spot = (Spot) lv.getItemAtPosition(position);
                 if(lay == null) {
                     Intent detailIntent = new Intent(LocationActivity.this, DetailActivity.class);

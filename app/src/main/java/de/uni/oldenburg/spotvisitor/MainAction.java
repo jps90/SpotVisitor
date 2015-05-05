@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import de.uni.oldenburg.spotvisitor.compass.CompassActivity;
 import de.uni.oldenburg.spotvisitor.detail.DetailActivity;
+import de.uni.oldenburg.spotvisitor.entry.EntryActivity;
 import de.uni.oldenburg.spotvisitor.location.LocationActivity;
 
 
@@ -46,7 +47,27 @@ public class MainAction extends ActionBarActivity {
             @Override
             public void onClick(View view) {
 
+                startActivity(new Intent(MainAction.this, EntryActivity.class));
+
+            }
+        });
+
+        this.lastSpotsButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
                 startActivity(new Intent(MainAction.this, LocationActivity.class));
+
+            }
+        });
+
+        this.endAppButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                // Nothing at the moment
 
             }
         });

@@ -1,8 +1,9 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="30px">
+    android:layout_margin="30px"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <TextView
@@ -15,7 +16,7 @@
 
 
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30px"
@@ -32,18 +33,18 @@
 
 
             <Button
-                android:id="@+id/create_spot"
+                android:id="@+id/start_up_create_spot"
                 android:text="@string/start_up_create_spot"
                 android:layout_column="0"
                 android:layout_height="230px"
                 android:layout_width="170px"
 
 
- />
+                />
             <Button
-                android:id="@+id/seen_spots"
+                android:id="@+id/start_up_seen_spots"
                 android:text="@string/start_up_seen_spots"
-                android:layout_column="1"
+                android:layout_column="0"
                 android:layout_height="230px"
                 android:layout_width="170px" />
 

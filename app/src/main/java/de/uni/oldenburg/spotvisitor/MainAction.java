@@ -34,14 +34,6 @@ public class MainAction extends ActionBarActivity {
         this.compassButton =  (Button) findViewById(R.id.start_up_compass);
         this.endAppButton =  (Button) findViewById(R.id.start_up_end);
 
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-
-
         this.createButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -81,6 +73,16 @@ public class MainAction extends ActionBarActivity {
 
             }
         });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
+
+
     }
 
     @Override

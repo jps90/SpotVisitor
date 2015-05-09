@@ -18,6 +18,7 @@ import java.util.List;
 
 import de.uni.oldenburg.spotvisitor.MainAction;
 import de.uni.oldenburg.spotvisitor.R;
+import de.uni.oldenburg.spotvisitor.datas.DatabaseUtil;
 import de.uni.oldenburg.spotvisitor.datas.Spot;
 import de.uni.oldenburg.spotvisitor.datas.SpotAdapter;
 import de.uni.oldenburg.spotvisitor.detail.DetailActivity;
@@ -32,6 +33,7 @@ public class LocationActivity extends MainAction {
     private List<Spot> dummylist;
 
     private DetailFragment detailFragment;
+    private DatabaseUtil util;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,9 @@ public class LocationActivity extends MainAction {
     protected void onStart() {
         super.onStart();
         EditText filter = (EditText) findViewById(R.id.txtLocFilter);
+        util = new DatabaseUtil(this);
 
+        fillDatabase();
         createList();
         final SpotAdapter listadapter = new SpotAdapter(this, R.layout.listitem_locations, dummylist);
         final ListView lv = (ListView) findViewById(R.id.listLocLocations);
@@ -87,7 +91,10 @@ public class LocationActivity extends MainAction {
     }
 
     private void createList(){
-        dummylist = new ArrayList<Spot>();
+        dummylist = util.getAllSpots();
+    }
+
+    private void fillDatabase(){
         Spot spot = new Spot();
         spot.setDate(new Date());
         spot.setDescription("Voll das schöne Schloss");
@@ -100,7 +107,7 @@ public class LocationActivity extends MainAction {
         spot.setLocationname("Oldenburg");
         spot.setName("Oldenburger Schloss");
         spot.setUser("stubbe");
-        dummylist.add(spot);
+        util.saveSpot(spot);
 
         spot = new Spot();
         spot.setDate(new Date());
@@ -114,7 +121,7 @@ public class LocationActivity extends MainAction {
         spot.setLocationname("Oldenburg");
         spot.setName("Lambertikriche");
         spot.setUser("stubbe");
-        dummylist.add(spot);
+        util.saveSpot(spot);
 
 
         spot = new Spot();
@@ -130,7 +137,7 @@ public class LocationActivity extends MainAction {
         spot.setLocationname("Oldenburg");
         spot.setName("Oldenburger Hafen");
         spot.setUser("stubbe");
-        dummylist.add(spot);
+        util.saveSpot(spot);
 
 
         spot = new Spot();
@@ -145,7 +152,7 @@ public class LocationActivity extends MainAction {
         spot.setLocationname("Oldenburg");
         spot.setName("Hauptbahnhof");
         spot.setUser("stubbe");
-        dummylist.add(spot);
+        util.saveSpot(spot);
 
 
         spot = new Spot();
@@ -160,8 +167,9 @@ public class LocationActivity extends MainAction {
         spot.setImage(R.drawable.pferdemarkt);
         spot.setLocationname("Oldenburg");
         spot.setName("Pferdemarkt");
-        spot.setUser("stubbe");
-        dummylist.add(spot);
+        spot.setUser("Nobody");
+        util.saveSpot(spot);
+
     }
 
 }

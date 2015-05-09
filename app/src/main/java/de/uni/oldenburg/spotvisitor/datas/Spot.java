@@ -12,6 +12,7 @@ import java.util.List;
 public class Spot implements Serializable{
 
     private static final long serialVersionUID = 6064086687727213501L;
+    private Long id;
     private String description;
     private String name;
     private Date date;
@@ -92,6 +93,14 @@ public class Spot implements Serializable{
 
     public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override
